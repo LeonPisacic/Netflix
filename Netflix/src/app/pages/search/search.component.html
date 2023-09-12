@@ -1,0 +1,34 @@
+<div class="contain mt-5 p-5"> <!--margin-top level 5 (najveci level boostrap klase za dodjeljivanje margina)-->
+
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+        <div class="row">
+            <div class="mb-3 col-lg-10">
+                <input type="text" class="form-control" formControlName="movieName" placeholder="Search Movie Here...">
+            </div>
+
+            <div class="col-lg-2">
+                <button class="btn btn-md">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row mt-5">
+
+        <div class="col-lg-4" *ngFor="let searchedMovie of searchResult"> <!--ispisivanje filma nakon search-a-->
+            <div class="row selectedMovie">
+
+                <div class="col-lg-3 mt-4 mb-4" *ngIf="searchedMovie.poster_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{searchedMovie.poster_path}}"
+                        [routerLink]="['/movie', searchedMovie.id]">
+                </div>
+                <div class="col-lg-9 mt-3 mb-3">
+                    <h5>{{searchedMovie.original_title}}</h5>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

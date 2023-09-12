@@ -1,0 +1,48 @@
+.carousel-inner {
+    height: 700px;
+}
+
+.carousel-inner .carousel-item img {
+    height: 700px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    color: #E50914;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+.rowposter {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.rowposter::-webkit-scrollbar {
+    /*da mi se ne pokazuje scrollbar na stranici*/
+    display: none;
+}
+
+.rowimg {
+    max-height: 100px;
+    object-fit: contain;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+}
+
+.rowimg:hover {
+    transform: scale(1.09);
+    /*efekt kada se hovera preko trending filma da se pomakne prema meni animcija*/
+    cursor: pointer;
+}
+
+.largeposter {
+    max-height: 300px;
+}
