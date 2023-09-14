@@ -1,12 +1,13 @@
-<div class="contain mt-5 p-5"> <!--margin-top level 5 (najveci level boostrap klase za dodjeljivanje margina)-->
+<div class="contain mt-5 p-5 text-center">
+    <!--margin-top level 5 (najveci level boostrap klase za dodjeljivanje margina)-->
 
     <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
         <div class="row">
-            <div class="mb-3 col-lg-10">
+            <div class="mb-3 col-lg-11  ">
                 <input type="text" class="form-control" formControlName="movieName" placeholder="Search Movie Here...">
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-1">
                 <button class="btn btn-md">Search</button>
             </div>
         </div>
